@@ -1,0 +1,8 @@
+BTC prices on Coindesk: 
+Bitcoin: EUR: 36,722.8259, GBP: 30,762.7395, USD: 38,679.5061, 
+BTC prices on Gemini: 
+BTC: {'EUR': 36789.39, 'GBP': 30939.05, 'USD': 38716.04, 'CNY': 269599.91}
+
+38719.56000000
+
+BTC prices on Coinbase: 38915.50
