@@ -1,17 +1,21 @@
+from binance.Binance import Binance
+from cryptocom.CryptoCom import CryptoCom
 from supersentiment.SuperSentiment import SuperSentiment
+from sentiment.Sentiment import Sentiment
 
 if __name__ == "__main__":
     superSentiment = SuperSentiment()
-
-    superSentiment.getPriceFromBinance('ETH')
+    sentiment = Sentiment()
+    
+    #superSentiment.getPriceFromBinance('ETH')
     superSentiment.getPriceFromBinance('BTC')
 
-    superSentiment.getPriceFromCoinbase('ETH')
-    superSentiment.getPriceFromCoinbase('BTC')
+    #superSentiment.check(Binance, CryptoCom)
 
-    #superSentiment.getPriceFromCryptoCom('ETH')
-    #superSentiment.getPriceFromCryptoCom('BTC')
+    superSentiment.getPriceFromCoinbase()
+
+    "spot/ticker:BTC_USDT"
 
     print(f"Buffer: {superSentiment.buffer}")
 
-    superSentiment.myPlot()
+    #superSentiment.myPlot()

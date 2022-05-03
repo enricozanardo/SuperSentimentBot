@@ -52,26 +52,25 @@ class SuperSentiment():
         return sentiment
 
     def check(self, exchage1, exchange2):
-
-        if exchage1 - exchange2 >= 1:
+        #if exchage1 - exchange2 >= 1:
             sentiment = self.checkSentiment()
             if sentiment == True:
                 print("Stay")
             else:
                 print("Sell")
-        else:
-            print("move money from wallets")
+        #else:
+            print("You should move money from wallets")
 
     def getPriceFromBinance(self, symbol):
         binancePrice = self.binance.crypto_to_tether(symbol)
         self.buffer.append(binancePrice)
 
-    def getPriceFromCryptoCom(self, symbol):
-        cryptoComPrice = self.cryptocom.crypto_to_tether(symbol)
-        self.buffer.append(cryptoComPrice)
+    # def getPriceFromCryptoCom(self, symbol):
+    #     cryptoComPrice = self.cryptocom.crypto_to_tether(symbol)
+    #     self.buffer.append(cryptoComPrice)
 
-    def getPriceFromCoinbase(self, amount):
-        coinbasePrice = self.coinbase.crypto_to_tether(amount)
+    def getPriceFromCoinbase(self):
+        coinbasePrice = self.coinbase.get_exchange()
         self.buffer.append(coinbasePrice)
 
     
