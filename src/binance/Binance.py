@@ -18,9 +18,9 @@ class Binance:
         response = [base['baseAsset'] for base in self.page.json()['symbols']]
         return response
 
-    # def get_crypto_price(self, pair):
-    #     self.page = requests.get(f'{self.pair_url}?symbol={pair}')
-    #     return self.page.json()['price']
+    def get_crypto_price(self, pair):
+         self.page = requests.get(f'{self.pair_url}?symbol={pair}')
+         return self.page.json()['price']
 
     # def crypto_to_usd(self, crypto_currency):
     #     """

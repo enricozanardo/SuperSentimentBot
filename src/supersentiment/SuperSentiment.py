@@ -10,9 +10,9 @@ class SuperSentiment():
     """
     """
     def __init__(self):
-        self.binance = Binance()
-        self.cryptocom = CryptoCom()
-        self.coinbase = Coinbase()
+        # self.binance = Binance()
+        # self.cryptocom = CryptoCom()
+        # self.coinbase = Coinbase()
         self.sentiment = Sentiment()
         self.buffer = []
 
@@ -51,14 +51,14 @@ class SuperSentiment():
         print("Machine Learning function -> Return sentiment")
         return sentiment
 
-    def check(self, exchage1, exchange2):
-        #if exchage1 - exchange2 >= 1:
+    def check(self, exchage1:float, exchange2:float):
+        if exchage1 - exchange2 >= 1:
             sentiment = self.checkSentiment()
             if sentiment == True:
                 print("Stay")
             else:
                 print("Sell")
-        #else:
+        else:
             print("You should move money from wallets")
 
     def getPriceFromBinance(self, symbol):
@@ -69,8 +69,8 @@ class SuperSentiment():
     #     cryptoComPrice = self.cryptocom.crypto_to_tether(symbol)
     #     self.buffer.append(cryptoComPrice)
 
-    def getPriceFromCoinbase(self):
-        coinbasePrice = self.coinbase.get_exchange()
-        self.buffer.append(coinbasePrice)
+    # def getPriceFromCoinbase(self):
+    #     coinbasePrice = self.coinbase.get_exchange()
+    #     self.buffer.append(coinbasePrice)
 
     
